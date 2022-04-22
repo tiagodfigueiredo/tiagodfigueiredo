@@ -7,8 +7,8 @@ sudo ./aws/install
 
 testar a ferramenta : aws ou ./aws
 ao executar: aws  vai pedir 2 codigos  
-KEY ID AKIATETDNEG4T3IOLB4E
-SECRET ACESS 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
+KEY ID ..................B4E
+SECRET ACESS ..................
 Defaut region name : us-east-1
 Defaut format : json
 
