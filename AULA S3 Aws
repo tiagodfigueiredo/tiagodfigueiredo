@@ -1,0 +1,39 @@
+Acessar Amazon S3 e Configurar os Buckets e dar acesso publico e anotar as chaves !
+
+Instalar AWS CLI https://docs.aws.amazon.com/pt_br/cli/latest/userguide/getting-started-install.html 
+$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+testar a ferramenta : aws ou ./aws
+ao executar: aws  vai pedir 2 codigos  
+KEY ID AKIATETDNEG4T3IOLB4E
+SECRET ACESS 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
+Defaut region name : us-east-1
+Defaut format : json
+
+------------------------------------------------------------------------------
+https://aws.amazon.com/pt/cli/
+aws ec2 describe-instances - more ( MOSTRA TUDO
+aws ec2 describe-instances | grep PublicDnsName ( especifico)   ( comando grep busca avançada )
+aws ec2 describe-instances --query "Reservations[].Instances[].{InstanceId:InstanceId,State:State}"  ( trazer tudo que ta ligado nas instancias )
+------------------------------------------------------------------------------
+
+Mostra todos os Buckets online
+asw s3 sl 
+
+Mostrar aquivos dentro do Bucket 
+aws s3 ls ( NOME )  ex :
+asw s3 ls tiagofig
+
+Copiar arquivos ( Comando super importante )
+aws s3 cp s3://tiagofig /home/ubuntu/buckettiago --recursive    
+nesse comando eu quero copiar os arquios do meu Bucket s3://tiagofig para dentro do caminho ate a pasta buckettiago 
+( -- recursive para puxar tudo ) 
+
+sincroniza arquivos fazendo upload na S3 ( NUVEM )
+aws s3 sync . s3://tiagofig ou s3://shyriu    ( pode acontecer de dar acesso negado ( ter que liberar na nuvem  ) 
+
+inf. add a baixo e sites importantes
+
+
