@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "amazon-terraform",
+			"path": "../amazon-terraform"
+		}
+	],
+	"settings": {}
+}
